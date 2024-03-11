@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:rakaya_challange/servies/test.dart';
 import 'package:rakaya_challange/widgets/custembuttonfupage.dart';
 import 'package:rakaya_challange/widgets/custom_appbar.dart';
@@ -11,7 +12,7 @@ class Furntiure_page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black45,
-      appBar: CustomAppBar(title: 'FURNTIURE'),
+      appBar: CustomAppBar(title: '1'.tr),
       body: Column(
         children: [
           MaterialButtonFirstPage(),

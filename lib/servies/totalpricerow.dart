@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class totalprice_calculator extends StatelessWidget {
   const totalprice_calculator({super.key, required this.price});
@@ -11,7 +12,7 @@ class totalprice_calculator extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            'Total:',
+            '5'.tr,
             style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
           ),
           Text(

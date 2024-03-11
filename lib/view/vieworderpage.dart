@@ -25,7 +25,7 @@ class _ViewOrderPageState extends State<ViewOrderPage> {
     final halfScreenHeight = screenHeight / 2;
 
     return Scaffold(
-      appBar: CustomAppBar(title: 'chekout'),
+      appBar: CustomAppBar(title: '2'.tr),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -124,15 +124,9 @@ class _ViewOrderPageState extends State<ViewOrderPage> {
                              
                               con.addCartItem(
                                   count, widget.title, widget.price);
-                              print(
-                                  '${con.cart[0].name} ${con.cart[0].price} ${con.cart[0].quantity}');
-                                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => PricePage(),
-                              ));
+                             
                             },
-                            child: Text('Add to cart'),
+                            child: Text('3'.tr),
                             color: Colors.deepOrange[400],
                           );
                         })

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class dilveryrowprice extends StatelessWidget {
   const dilveryrowprice({
@@ -15,7 +16,7 @@ class dilveryrowprice extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(' delivey'),
+          Text('4'.tr),
           Text(name),
           
           Text('\$${price}'),

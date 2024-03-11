@@ -184,7 +184,7 @@ class PricePage extends StatelessWidget {
               child: GestureDetector(
                 onTap: () => print(total),
                 child: Text(
-                  '😄\nThank you',
+                  '😄\n'+'6'.tr,
                   style: TextStyle(
                       fontSize: 50,
                       fontWeight: FontWeight.bold,
