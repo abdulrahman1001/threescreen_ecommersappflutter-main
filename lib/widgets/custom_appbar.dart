@@ -34,7 +34,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         Padding(
-            padding: const EdgeInsets.only(right: 22),
+            padding: const EdgeInsets.only(right: 22,left: 22),
             child:badges.Badge (
               badgeContent: Text('${con.cart.length}'),
             
