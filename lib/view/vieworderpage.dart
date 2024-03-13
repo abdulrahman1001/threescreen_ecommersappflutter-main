@@ -22,7 +22,7 @@ class _ViewOrderPageState extends State<ViewOrderPage> {
   Widget build(BuildContext context) {
     // Calculate half of the screen height
     final screenHeight = MediaQuery.of(context).size.height;
-    final halfScreenHeight = screenHeight / 2;
+    final halfScreenHeight = screenHeight / 1;
 
     return Scaffold(
       appBar: CustomAppBar(title: '2'.tr),
@@ -31,11 +31,12 @@ class _ViewOrderPageState extends State<ViewOrderPage> {
           children: [
             // First half with the image
             Container(
-              height: halfScreenHeight,
+              margin: EdgeInsets.only(top: 50),
+              height: halfScreenHeight/2,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: NetworkImage(widget.img),
-                  fit: BoxFit.cover,
+                  // fit: BoxFit.cover,
                 ),
               ),
             ),
@@ -60,12 +61,12 @@ class _ViewOrderPageState extends State<ViewOrderPage> {
                       children: [
                         Container(
                           alignment: Alignment.center,
-                          height: 200,
-                          width: 400,
+                          height: 100,
+                          width: 200,
                           decoration: BoxDecoration(
-                              color: Colors.blue[900],
+                              color: Colors.blue[700],
                               borderRadius: BorderRadius.circular(22)),
-                          child: Text('\$${widget.price}'),
+                          child: Text('price:\$${widget.price}'),
                         ),
                         Container(
                           alignment: Alignment.center,
@@ -121,10 +122,25 @@ class _ViewOrderPageState extends State<ViewOrderPage> {
                         builder: (con) {
                           return MaterialButton(
                             onPressed: () {
-                             
-                              con.addCartItem(
-                                  count, widget.title, widget.price);
-                             
+                              if (count == 0) {
+                                final snackBar = SnackBar(
+                                  content: Text(
+                                      'you cannnot add zero items to the cart'),
+                                  duration: Duration(
+                                      seconds:
+                                          3), // Show the SnackBar for 3 seconds
+                                );
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(snackBar);
+                                    
+
+                            
+                              }
+                              else{
+                                    con.addCartItem(
+                                    count, widget.title, widget.price);
+                              }
+                              
                             },
                             child: Text('3'.tr),
                             color: Colors.deepOrange[400],

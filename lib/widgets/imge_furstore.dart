@@ -11,23 +11,25 @@ class imge_furstore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.only(top: 10),
       alignment: Alignment.bottomLeft,
       
-      height: MediaQuery.of(context).size.height * 50 / 100,
-      width: MediaQuery.of(context).size.width * 80 / 100,
+      height: MediaQuery.of(context).size.height * 80 / 100,
+      width: MediaQuery.of(context).size.width * 20 / 100,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
           color: Colors.blue,
           image:  DecorationImage(
               image: NetworkImage(img),
-              fit: BoxFit.fill)),
+              fit: BoxFit.fill
+              )),
       child: Container( constraints: const BoxConstraints(
-          maxWidth: double.infinity,
-          maxHeight: double.infinity
+          // maxWidth: double.infinity,
+          // maxHeight: double.infinity
       ),
       
      
-      margin: EdgeInsets.only(left: 3,bottom: 15),
+      margin: EdgeInsets.only(left: 3,bottom: 15,top: 10),
         decoration: BoxDecoration(
     
         borderRadius: BorderRadius.circular(60),

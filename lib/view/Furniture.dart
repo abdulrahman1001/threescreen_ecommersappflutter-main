@@ -10,21 +10,25 @@ class Furntiure_page extends StatelessWidget {
 // add drawer widget to sort button
   @override
   Widget build(BuildContext context) {
+       final screenHeight = MediaQuery.of(context).size.height;
+    final halfScreenHeight = screenHeight / 1;
     return Scaffold(
       backgroundColor: Colors.black45,
       appBar: CustomAppBar(title: '1'.tr),
-      body: Column(
-        children: [
-          MaterialButtonFirstPage(),
-          Spacer(
-            flex: 1,
-          ),
-          build_item_infromtion(),
-          Spacer(
-            flex: 2,
-          )
-        ],
-      ),
+      body: 
+         Container(
+          height: halfScreenHeight,
+           child: Column(
+            children: [
+              MaterialButtonFirstPage(),
+              
+              
+              Container( height: halfScreenHeight/1.2, child: build_item_infromtion()),
+             
+            ],
+                   
+                 ),
+         ),
     );
   }
 }
